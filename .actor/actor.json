@@ -1,0 +1,73 @@
+{
+	"actorSpecification": 1,
+	"name": "Food Safety Inspection-Scraper",
+	"title": "Food Inspection Scraper",
+	"description": "This scraper is designed to automate the collection of Food Safety Inspection data from the McHenry County Public Health Information Management System. Its primary goal is to facilitate timely access to public health data for analysis and reporting.",
+	"version": "0.0",
+	"meta": {
+		"templateId": "python-start"
+	},
+	"input": "./input_schema.json",
+	"readme": "../README.md",
+	"dockerfile": "./Dockerfile",
+	"storages": {
+		"dataset": {
+			"actorSpecification": 1,
+			"title": "Food Inspection Scraper",
+			"views": {
+				"results": {
+					"title": "Scraped Results",
+					"transformation": {
+						"fields": [
+							"establishment",
+							"Site",
+							"Address",
+							"City",
+							"Person in Charge",
+							"Inspection Date",
+							"Permit Holder",
+							"Gasket Violations"
+						]
+					},
+					"display": {
+						"component": "table",
+						"properties": {
+							"establishment": {
+								"label": "establishment",
+								"format": "string"
+							},
+							"Site": {
+								"label": "Site",
+								"format": "string"
+							},
+							"Address": {
+								"label": "Address",
+								"format": "string"
+							},
+							"City": {
+								"label": "City",
+								"format": "string"
+							},
+							"Person in Charge": {
+								"label": "Person in Charge",
+								"format": "string"
+							},
+							"Inspection Date": {
+								"label": "Inspection Date",
+								"format": "string"
+							},
+							"Permit Holder": {
+								"label": "Permit Holder",
+								"format": "string"
+							},
+							"Gasket Violations": {
+								"label": "Gasket Violations",
+								"format": "string"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
