@@ -1,7 +1,6 @@
 from apify import Actor
 import os
 import requests
-import pandas as pd
 import pdfplumber
 import re
 from bs4 import BeautifulSoup
@@ -140,4 +139,4 @@ async def main():
                                 "Gasket Violations": "; ".join(violation_comments)
                             }
                         )
-        print("Scraping completed!")
+print("Scraping completed!")
